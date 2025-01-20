@@ -1,0 +1,187 @@
+/* Container for the entire profile card */
+.container {
+  display: flex;
+  flex-direction: row; /* Side-by-side layout by default */
+  margin: 100px auto;
+  padding: 20px;
+  width: 100vw;
+  gap: 20px;
+}
+
+/* Profile cards container */
+.profile-cards {
+  display: flex;
+  flex-direction: column;
+  width: 50%; /* Occupies half of the screen */
+}
+
+/* Profile card styling */
+.profile-card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%; /* Full width of container */
+  height: auto; /* Adjusts height based on content */
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 20px; /* Space between cards */
+}
+
+/* Left section for the profile image */
+.profile-left {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: 10px;
+}
+
+/* Styling for the Image component */
+.img1 {
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Right section for profile details */
+.profile-right {
+  flex: 1;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Text content styling */
+.profile-right .cont h1 {
+  font-size: 18px;
+  color: #333;
+  margin: 0 0 5px;
+}
+
+.profile-right .cont p {
+  font-size: 14px;
+  color: #555;
+  margin: 2px 0;
+}
+
+/* Button styling */
+.profile-right button {
+  margin-top: 10px;
+  padding: 8px 12px;
+  font-size: 14px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.profile-right button:hover {
+  background-color: #0056b3;
+}
+
+/* Right section: Map Styling */
+.right-map {
+  width: 45%; /* Takes the other half of the screen width */
+  height: 80vh; /* Full height of the viewport */
+  padding: 0;
+  position: fixed;
+  right: 30px;
+}
+
+.right-map iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+
+/* Admin actions (Edit/Delete buttons) */
+.admin-actions {
+  margin-top: 15px;
+}
+
+.edit-button {
+  background-color: #28a745;
+}
+
+.edit-button:hover {
+  background-color: #218838;
+}
+
+.delete-button {
+  background-color: #dc3545;
+  margin-left: 10px;
+}
+
+.delete-button:hover {
+  background-color: #c82333;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  /* Adjust layout for tablets */
+  .container {
+    flex-direction: column; /* Stack cards and map vertically */
+    padding: 10px;
+  }
+
+  .profile-cards {
+    width: 100%; /* Full width on smaller screens */
+  }
+
+  .right-map {
+    position: relative;
+    width: 100%;
+    height: 300px; /* Reduce map height */
+    margin-top: 20px; /* Add space below profile cards */
+  }
+}
+
+@media (max-width: 768px) {
+  /* Adjust layout for smaller tablets and large phones */
+  .profile-card {
+    flex-direction: column; /* Stack profile image and details */
+    align-items: flex-start;
+    text-align: left;
+    padding: 10px;
+  }
+
+  .profile-left {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto; /* Center profile image */
+  }
+
+  .profile-right {
+    align-items: center;
+    text-align: center;
+  }
+
+  .right-map {
+    height: 250px; /* Further reduce map height */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Adjust layout for mobile phones */
+  .profile-right .cont h1 {
+    font-size: 16px; /* Reduce font size for headings */
+  }
+
+  .profile-right .cont p {
+    font-size: 12px; /* Reduce font size for text */
+  }
+
+  .profile-right button {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  .right-map {
+    height: 200px; /* Smaller map for mobile */
+  }
+}
