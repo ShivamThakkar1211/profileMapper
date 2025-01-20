@@ -13,7 +13,6 @@
     "bootstrap": "^5.3.3",
     "font-awesome": "^4.7.0",
     "framer-motion": "^11.18.1",
-    "mdb-react-ui-kit": "^9.0.0",
     "mongodb": "^6.12.0",
     "mongoose": "^8.9.5",
     "next": "15.1.5",
