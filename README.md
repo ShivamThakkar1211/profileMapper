@@ -1,3 +1,21 @@
+# Profile Mapper
+
+This project is built using Next.js and provides a platform to map profiles efficiently.
+
+## Getting Started
+
+To run this application, you need to configure environment variables. Create a `.env` file in the root of your project and add the following variables:
+
+```env
+MONGODB_URI=""
+GOOGLE_CLIENT_ID=""
+GOOGLE_CLIENT_SECRET=""
+NEXTAUTH_SECRET=your-secret-key
+ADMIN_EMAILS=shivamrsnr990@gmail.com
+NEXT_PUBLIC_GOOGLEMAP_API=""
+
+
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
@@ -15,6 +33,8 @@ bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+Open [https://profile-mapper-lemon.vercel.app/) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
